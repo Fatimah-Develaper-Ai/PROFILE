@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0e27;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4757;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b7a;
+}
+
+/* Section Divider Arrow */
+.section-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.section-arrow svg {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Tech Badge */
+.tech-badge {
+  border: 1px solid #ff4757;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: rgba(255, 71, 87, 0.05);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tech-badge:hover {
+  background: rgba(255, 71, 87, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.2);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid #1a1f3a;
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ff4757;
+}
+
+/* Accomplishment Card */
+.accomplishment-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.accomplishment-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 71, 87, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Form Input */
+.form-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ffffff;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff4757;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Red Button */
+.btn-red {
+  background: #ff4757;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  background: #ff6b7a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
+}
+
+/* Social Icon */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ff4757;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.social-icon:hover {
+  background: #ff4757;
+  transform: translateY(-3px);
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav Link */
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Experience Icon Box */
+.exp-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
